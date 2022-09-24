@@ -1,0 +1,32 @@
+{
+  "name": "goit-node-hw-01-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^9.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier-eslint": "^15.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavVyshynskyi/goit-node-hw-01-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaroslavVyshynskyi/goit-node-hw-01-start/issues"
+  },
+  "homepage": "https://github.com/YaroslavVyshynskyi/goit-node-hw-01-start#readme"
+}
