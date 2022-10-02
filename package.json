@@ -1,27 +1,38 @@
 {
-  "name": "goit-node-hw-01-start",
+  "name": "nodejs-hw-rest-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "commander": "^9.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "joi": "^17.6.0",
     "mongoose": "^6.6.1",
+    "morgan": "1.10.0",
     "nanoid": "^3.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "5.2.0",
     "nodemon": "^2.0.20",
     "prettier-eslint": "^15.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node",
-    "dev": "nodemon index"
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./server.js",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YaroslavVyshynskyi/goit-node-hw-01-start.git"
+    "url": "git+https://github.com/YaroslavVyshynskyi/nodejs-hw-rest-api"
   },
   "keywords": [],
   "author": "",
