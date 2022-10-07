@@ -2,11 +2,15 @@ const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
 const contactsRouter = require('./routes/api/contacts');
 const app = express();
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
-const { DB_HOST } = require('./config/config');
+
+dotenv.config();
+const { DB_HOST } = process.env;
+// const { DB_HOST } = require('./config/config');
 
 mongoose
   .connect(DB_HOST)
