@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const Joi = require('joi');
-const { handleSaveErrors } = require('../middlewares/index');
+const { handleSaveErrors } = require('../helpers');
 
 const userSchema = new Schema(
   {
@@ -17,6 +17,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 6,
+    },
+    token: {
+      type: String,
+      default: '',
     },
   },
   { versionKey: false, timestamps: true }
