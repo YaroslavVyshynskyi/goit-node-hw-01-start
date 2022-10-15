@@ -8,7 +8,7 @@ const getAll = async (req, res) => {
   const result = await Contact.find({ owner, ...query }, '-createdAt -updatedAt', {
     skip,
     limit,
-  }).populate('owner', 'name email');
+  }).populate('owner', 'name email phone');
 
   res.json(result);
 };

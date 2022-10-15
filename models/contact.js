@@ -26,7 +26,7 @@ const contactSchema = new Schema(
       required: true,
     },
   },
-  { versionKey: false, timestamps: true, collection: 'contacts_list' }
+  { versionKey: false, timestamps: true }
 );
 
 contactSchema.post('save', handleSaveErrors);
